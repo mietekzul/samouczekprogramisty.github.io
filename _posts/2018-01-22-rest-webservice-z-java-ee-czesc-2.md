@@ -239,7 +239,7 @@ Dodatkowa adnotacja `@Path` rozszerza tę umieszczoną nad klasą `ReservationWe
 
 Zwróć także uwagę na użycie adnotacji [`@Min`]({{ site.doclinks.javax.validation.constraints.Min }}). Adnotacja ta uruchomi mechanizm walidacji dla parametru `id`. Mechanizm ten sprawdzi czy liczba przekazana w adresie ma wartość większą, bądź równą 0. Jeśli wartość parametru jest niepoprawna zostanie rzucony wyjątek.
 
-Wewnątrz ciała metody odwołuję się do atrybutu `dao` pobierając rezerwację na podstawie identyfikatora pobranego od użytkownika. `dao` zwróci wartość `null` jeśli rezerwacja o danym identyfikatorze nie zostanie odnaleziona. W takim przypadku klient uzyska odpowiedź z kodem [404](https://developer.mozilla.org/uk/docs/Web/HTTP/Status/404) informującą o braku szukanego elementu.
+Wewnątrz ciała metody odwołuję się do atrybutu `dao` pobierając rezerwację na podstawie identyfikatora pobranego od użytkownika. `dao` zwróci wartość `null` jeśli rezerwacja o danym identyfikatorze nie zostanie odnaleziona. W takim przypadku klient uzyska odpowiedź z kodem [204](https://developer.mozilla.org/uk/docs/Web/HTTP/Status/204) informującą o braku szukanego elementu.
 
 Jeśli `dao` znajdzie rezerwację o zadanym identyfikatorze, wówczas zostanie ona przekazana w odpowiedzi. Także tutaj zostanie ona przekształcona do formatu JSON.
 
